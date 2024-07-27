@@ -11,4 +11,9 @@ public class Tarefa {
     public String getDescrição() {
         return descrição;
     }
+
+    @Override
+    public String toString() {
+        return " - " + descrição;
+    }
 }

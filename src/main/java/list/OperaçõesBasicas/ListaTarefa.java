@@ -21,7 +21,7 @@ public class ListaTarefa {
         for(Tarefa tarefa : tarefaList){
             if (tarefa.getDescrição().equalsIgnoreCase(descricao)){
              tarefasParaRemover.add(tarefa);
-             System.out.printf("A tarefa foi " + tarefa +"apagada com sucess");
+             // System.out.printf("A tarefa foi " + tarefa +"apagada com sucesso");
             }
         }
         tarefaList.removeAll(tarefasParaRemover);
@@ -38,7 +38,12 @@ public class ListaTarefa {
         ListaTarefa tarefasHoje = new ListaTarefa();
         System.out.println("O número total de tarefas é " + tarefasHoje.obterNumeroTotalTarefas());
         //  Para saber o numero total de tarefas, chama o metodo obterNumeroTotalTarefas  como parte de um printIn
+        tarefasHoje.adicionarTarefa("Tarefa 01");
+        tarefasHoje.adicionarTarefa("Tarefa 01");
+        tarefasHoje.adicionarTarefa("Aprender Java Collection Map");
 
-
+        tarefasHoje.removerTarefa("Tarefa");
+        System.out.println("O número total de tarefas é " + tarefasHoje.obterNumeroTotalTarefas());
+        tarefasHoje.obterDescricoesTarefas();
     }
 }
