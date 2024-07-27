@@ -19,6 +19,7 @@ public class ListaTarefa {
         for(Tarefa tarefa : tarefaList){
             if (tarefa.getDescrição().equalsIgnoreCase(descricao)){
              tarefasParaRemover.add(tarefa);
+             System.out.println("A tarefa foi " + tarefa +"apagada com sucess");
             }
         }
         tarefaList.removeAll(tarefasParaRemover);
@@ -28,5 +29,15 @@ public class ListaTarefa {
     }
     public void obterDescricoesTarefas(){
         System.out.println(tarefaList);
+    }
+
+    // psvn -- atalho para chamar metodo principale
+    public static void main(String[] args) {
+        ListaTarefa tarefasHoje = new ListaTarefa();
+        tarefasHoje.adicionarTarefa("Estudar Java hoje");
+        tarefasHoje.adicionarTarefa("Estudar Java Collection hoje");
+        tarefasHoje.obterDescricoesTarefas();
+        tarefasHoje.obterNumeroTotalTarefas();
+        tarefasHoje.removerTarefa("Estudar Java hoje");
     }
 }

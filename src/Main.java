@@ -4,8 +4,6 @@ import main.java.list.OperaçõesBasicas.ListaTarefa;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ListaTarefa tarefasHoje = new ListaTarefa();
-        tarefasHoje.adicionarTarefa("Estudar Java hoje");
-        tarefasHoje.obterDescricoesTarefas();
+
     }
 }
