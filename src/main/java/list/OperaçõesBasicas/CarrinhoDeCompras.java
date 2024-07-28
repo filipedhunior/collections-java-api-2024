@@ -16,7 +16,7 @@ public class CarrinhoDeCompras {
     public void adicionarItem(String nome, double preco, int quant){
         this.nome = nome;
         itemList.add(new Item());
-        System.out.println("Item " + nome + " adicionado ao carrinho");
+        System.out.println("Item [" + nome + "] adicionado ao carrinho");
     }
 
     public static void main(String[] args) {
