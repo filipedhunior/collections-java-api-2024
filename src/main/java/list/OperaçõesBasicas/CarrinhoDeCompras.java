@@ -19,9 +19,20 @@ public class CarrinhoDeCompras {
         System.out.println("Item adicionado ao carrinho");
     }
 
+    /*
+        Para remover os items da lista, vamos criar uma nova lista de escopo de metodo, iterar  sobre ela e adicionar os items correspondentes a entrada a ela e apos isso, eliminar os elementos da lista corresponte a lista original. Isto a cada chamada do metodo
+    */
     public void removerItem(String nome){
-
+        List<Item> itensParaRemover = new ArrayList<>();
+        for (Item item : itemList){
+            if (item.getNome().equalsIgnoreCase(nome)){
+                itensParaRemover.add(item);
+            }
+        }
+        itemList.removeAll(itensParaRemover);
     }
+
+    public
 
     public static void main(String[] args) {
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
