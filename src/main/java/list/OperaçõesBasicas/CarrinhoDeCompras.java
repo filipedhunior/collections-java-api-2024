@@ -13,10 +13,10 @@ public class CarrinhoDeCompras {
         this.itemList = new ArrayList<>();
     }
 
-    public void adicionarItem(String nome, double preco, int quant){
+    public void adicionarItem(String nome, double preco, double quant){
         this.nome = nome;
-        itemList.add(new Item());
-        System.out.println("Item adicionado ao carrinho");
+        itemList.add(new Item(nome, preco, quant));
+        System.out.println("Item [" + nome + "] [R$"+ (preco*quant) + "00] adicionado ao carrinho");
     }
 
     /*
@@ -32,10 +32,20 @@ public class CarrinhoDeCompras {
         itemList.removeAll(itensParaRemover);
     }
 
-    public
+    public double calcularValorTotal(){
+        List<Item> valorTotalCarrinho = new ArrayList<>();
+        double valorTotal = 0;
+        for (Item item : itemList){
+            valorTotal = valorTotal+(item.getPreco()* item.getQuant());
+        }
+        return valorTotal;
+    }
 
     public static void main(String[] args) {
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
-        carrinho.adicionarItem("Iphone 15", 3.500, 2);
+        carrinho.adicionarItem("Iphone 14", 3.500,1.0);
+        carrinho.adicionarItem("Iphone 15", 4.500,2.0);
+
+        System.out.printf("Valor total do carrinho = R$ %.3f", carrinho.calcularValorTotal());
     }
 }
