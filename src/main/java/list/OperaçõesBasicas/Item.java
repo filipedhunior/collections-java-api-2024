@@ -25,7 +25,8 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return '\''+ " "+
+                "Item{" +
                 "nome='" + nome + '\'' +
                 ", preco=" + preco +
                 ", quant=" + quant +

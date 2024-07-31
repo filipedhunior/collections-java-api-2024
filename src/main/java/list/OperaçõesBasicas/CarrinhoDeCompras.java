@@ -41,11 +41,17 @@ public class CarrinhoDeCompras {
         return valorTotal;
     }
 
+    public void exibirItens(){
+        System.out.println();
+        System.out.println(itemList);
+    }
+
     public static void main(String[] args) {
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
         carrinho.adicionarItem("Iphone 14", 3.500,1.0);
         carrinho.adicionarItem("Iphone 15", 4.500,2.0);
 
         System.out.printf("Valor total do carrinho = R$ %.3f", carrinho.calcularValorTotal());
+        carrinho.exibirItens();
     }
 }
