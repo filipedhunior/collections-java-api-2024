@@ -11,12 +11,35 @@ public class Livro {
         this.anoPublicacão = anoPublicacão;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getAnoPublicacão() {
+        return anoPublicacão;
+    }
+
+    public void setAnoPublicacão(int anoPublicacão) {
+        this.anoPublicacão = anoPublicacão;
+    }
+
     @Override
     public String toString() {
         return "Livro: " +
                 "'" + titulo + '\'' +
                 ", autor: " + autor + '\'' +
-                ", ano de Publicacão: " + anoPublicacão +
-                '}';
+                ", ano de Publicacão: " + anoPublicacão ;
     }
 }
