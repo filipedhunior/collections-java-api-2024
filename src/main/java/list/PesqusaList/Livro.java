@@ -10,4 +10,13 @@ public class Livro {
         this.autor = autor;
         this.anoPublicacão = anoPublicacão;
     }
+
+    @Override
+    public String toString() {
+        return "Livro: " +
+                "'" + titulo + '\'' +
+                ", autor: " + autor + '\'' +
+                ", ano de Publicacão: " + anoPublicacão +
+                '}';
+    }
 }

@@ -15,10 +15,23 @@ public class CatalogoLivros {
         System.out.println("O livro "+ titulo+ " de"+ autor+" foi adicionado ao catalogo");
     }
 
+    public void pesquisaPorAutor(String autor){
+        livrosLista.forEach(livro -> {
+            if (autor == autor){
+                System.out.println(livro);
+            }
+        });
+    }
+
     public static void main(String[] args) {
-        CatalogoLivros novoLivro00 = new CatalogoLivros();
-        novoLivro00.adicionarLivros(
-                "1985", "Orwell, George", 1940
+        CatalogoLivros catalogoPolitico = new CatalogoLivros();
+        catalogoPolitico.adicionarLivros(
+                "1985", "Orwell", 1940
         );
+        catalogoPolitico.adicionarLivros(
+                "A revolução dos bichos", "Orwell", 1940
+        );
+        catalogoPolitico.pesquisaPorAutor("Orwell");
+
     }
 }
