@@ -44,15 +44,14 @@ public class CatalogoLivros {
     }
 
     public static void main(String[] args) {
-        CatalogoLivros catalogoPolitico = new CatalogoLivros();
-        catalogoPolitico.adicionarLivros(
-                "1985", "Orwell", 1940
-        );
-        catalogoPolitico.adicionarLivros(
-                "A revolução dos bichos", "Orwell", 1965
-        );
-        // catalogoPolitico.pesquisaPorAutor("Orwell");
-        System.out.println(catalogoPolitico.pesquisaPorTitulo("1985"));
-        System.out.println(catalogoPolitico.pesquisarIntervaloAnos(1939,1941));
+        CatalogoLivros catalogoLivros = new CatalogoLivros();
+        catalogoLivros.adicionarLivros("Livro 1", "Autor 01", 2020);
+        catalogoLivros.adicionarLivros("Livro 1", "Autor 02", 2021);
+        catalogoLivros.adicionarLivros("Livro 2", "Autor 02", 2022);
+        catalogoLivros.adicionarLivros("Livro 3", "Autor 03", 2023);
+        catalogoLivros.adicionarLivros("Livro 4", "Autor 04", 1994);
+
+        System.out.println(catalogoLivros.pesquisarIntervaloAnos(2020,2022));
+        System.out.println(catalogoLivros.pesquisaPorTitulo("Livro 1"));
     }
 }
