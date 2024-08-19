@@ -25,11 +25,4 @@ public class Convidado {
         this.convite = convite;
     }
 
-    @Override
-    public String toString() {
-        return "Convidado{" +
-                "nome='" + nome + '\'' +
-                ", convite=" + convite +
-                '}';
-    }
 }

@@ -10,11 +10,9 @@ public class OrdenacaoNumeros {
         this.numerosInteiros = new ArrayList<>();
     }
 
-
-    /*public List<NumerosInteiros> ordenarAscendente(){
+    public List<NumerosInteiros> ordenarAscendente(){
 
         return
     }
-    */
 
 }

@@ -14,28 +14,17 @@ public class ConjuntoConvidados {
         convidadoSet.add(new Convidado(nome, codigoConvite));
     }
 
-    public void removerConvidadoPorCodigoConvite(int codigoConvite){
-        Convidado convidadosRemovidos = null;
-        if (!convidadoSet.isEmpty()){
-            for (Convidado convidado : convidadoSet){
-                if (convidado.getConvite() == codigoConvite){
-                    convidadosRemovidos = convidado;
-                    break;
-                }
-            }
-        } convidadoSet.remove(convidadosRemovidos);
+    /*public Set<ConjuntoConvidados> removerConvidadoPorCodigoConvite(int codigoConvite){
+        ConjuntoConvidados convidadosRemovidos = new ConjuntoConvidados();
+        for (ConjuntoConvidados c : Convidado){
+            if (c.getC)
+        }
 
+        return;
     }
-
+    */
     public void contarConvidados(){
         System.out.println(convidadoSet.size());
-    }
-
-    @Override
-    public String toString() {
-        return "ConjuntoConvidados{" +
-                "convidadoSet=" + convidadoSet +
-                '}';
     }
 
     public static void main(String[] args) {
@@ -44,9 +33,6 @@ public class ConjuntoConvidados {
         convidadoUm.adicionarConvidado("Filipe", 732005);
         convidadoUm.adicionarConvidado("Samara", 21102005);
 
-        convidadoUm.contarConvidados();
-
-        convidadoUm.removerConvidadoPorCodigoConvite(732005);
         convidadoUm.contarConvidados();
 
     }
