@@ -14,15 +14,15 @@ public class ConjuntoConvidados {
         convidadoSet.add(new Convidado(nome, codigoConvite));
     }
 
-    public Set<ConjuntoConvidados> removerConvidadoPorCodigoConvite(int codigoConvite){
+    /*public Set<ConjuntoConvidados> removerConvidadoPorCodigoConvite(int codigoConvite){
         ConjuntoConvidados convidadosRemovidos = new ConjuntoConvidados();
         for (ConjuntoConvidados c : Convidado){
             if (c.getC)
         }
 
-        return
+        return;
     }
-
+    */
     public void contarConvidados(){
         System.out.println(convidadoSet.size());
     }
