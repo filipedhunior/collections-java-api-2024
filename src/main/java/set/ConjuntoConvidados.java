@@ -31,11 +31,15 @@ public class ConjuntoConvidados {
         System.out.println(convidadoSet.size());
     }
 
+    public void exibirConvidados(){
+        System.out.println(convidadoSet);
+    }
+
     public static void main(String[] args) {
 //      Instanciando um novo Conjunto de Convidados
         ConjuntoConvidados convidadoUm = new ConjuntoConvidados();
 
-        //      Adicionando Convidados usando nome e codigoConvite
+        //  Adicionando Convidados usando nome e codigoConvite
         convidadoUm.adicionarConvidado("Filipe", 832004);
         convidadoUm.adicionarConvidado("Filipe", 732005);
         convidadoUm.adicionarConvidado("Samara", 21102005);
@@ -47,6 +51,6 @@ public class ConjuntoConvidados {
         convidadoUm.removerConvidadoPorCodigoConvite(732005);
 
 //      Exibindo todos os candidatos
-        convidadoUm.exibirconvidad
+        convidadoUm.exibirConvidados();
     }
 }
