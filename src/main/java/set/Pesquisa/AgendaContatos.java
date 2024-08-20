@@ -21,23 +21,24 @@ public class AgendaContatos {
     }
 //    Exibe todos os contatos da agenda.
     public Set<Contato> pesquisarPorNome(String nome){
-        AgendaContatos agendaPorNome = new AgendaContatos();
-        if (contatoSet.isEmpty()){
-            System.out.println("A lista esta vazia");
-        } else {
-            for (Contato c : contatoSet){
-                if (c.getNome().equals(nome)){
-                    agendaPorNome.contatoSet.add(c);
-                    break;
-                }
+        Set<Contato> contatoPorNome = new HashSet<>();
+        for (Contato c : contatoSet){
+            if (c.getNome().startsWith(nome)){
+                contatoPorNome.add(c);
             }
         }
-        contatoSet.removeAll(agendaPorNome.contatoSet);
-        return contatoSet;
+        return contatoPorNome;
     }
     //    Pesquisa contatos pelo nome e retorna uma conjunto com os contatos encontrados.
-    public void atualizarNumeroContato(String nome, int novoNumero){
-
+    public Contato atualizarNumeroContato(String nome, int novoNumero){
+        Contato contatoAtualizado = null;
+        for (Contato c : contatoSet){
+            if (c.getNome().equalsIgnoreCase(nome)){
+                c.setNumeroTelefone(novoNumero);
+                contatoAtualizado = c;
+                break;
+            }
+        } return contatoAtualizado;
     }
 //    Atualiza o número de telefone de um contato específico.
 
@@ -54,6 +55,11 @@ public class AgendaContatos {
         agenda.exibirContatos();
 
         agenda.pesquisarPorNome("Filipe Dhunior");
-//        agenda.atualizarNumeroContato("Joao", 1);
+
+        agenda.exibirContatos();
+
+        agenda.atualizarNumeroContato("Yoh Asakura", 2-222-2222);
+
+        agenda.exibirContatos();
     }
 }
