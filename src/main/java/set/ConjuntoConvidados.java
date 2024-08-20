@@ -31,6 +31,10 @@ public class ConjuntoConvidados {
         System.out.println(convidadoSet.size());
     }
 
+    public void exibirConvidados(){
+        System.out.println(convidadoSet);
+    }
+
     public static void main(String[] args) {
 //      Instanciando um novo Conjunto de Convidados
         ConjuntoConvidados convidadoUm = new ConjuntoConvidados();
@@ -47,6 +51,6 @@ public class ConjuntoConvidados {
         convidadoUm.removerConvidadoPorCodigoConvite(732005);
 
 //      Exibindo todos os candidatos
-        convidadoUm.exibirconvidad
+        convidadoUm.exibirConvidados();
     }
 }
