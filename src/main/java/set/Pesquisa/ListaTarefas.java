@@ -72,7 +72,7 @@ public class ListaTarefas {
         }
     }
 
-    public void marcarTarefaPendente(String descricao){
+        public void marcarTarefaPendente(String descricao){
         for (Tarefa t: tarefas){
             if(t.getDescricao().equals(descricao)){
                 t.setStatusConclusao(false);
