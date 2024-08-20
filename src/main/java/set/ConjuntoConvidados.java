@@ -39,7 +39,7 @@ public class ConjuntoConvidados {
 //      Instanciando um novo Conjunto de Convidados
         ConjuntoConvidados convidadoUm = new ConjuntoConvidados();
 
-        //      Adicionando Convidados usando nome e codigoConvite
+        //  Adicionando Convidados usando nome e codigoConvite
         convidadoUm.adicionarConvidado("Filipe", 832004);
         convidadoUm.adicionarConvidado("Filipe", 732005);
         convidadoUm.adicionarConvidado("Samara", 21102005);

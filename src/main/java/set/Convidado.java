@@ -25,4 +25,8 @@ public class Convidado {
         this.convite = convite;
     }
 
+    @Override
+    public String toString() {
+        return "\n" + nome + ", convite=" + convite;
+    }
 }
