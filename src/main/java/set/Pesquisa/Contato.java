@@ -19,11 +19,11 @@ public class Contato {
         this.nome = nome;
     }
 
-    public String getNumeroTelefone() {
+    public int getNumeroTelefone() {
         return numeroTelefone;
     }
 
-    public void setNumeroTelefone(String numeroTelefone) {
+    public void setNumeroTelefone(int numeroTelefone) {
         this.numeroTelefone = numeroTelefone;
     }
 
@@ -32,6 +32,6 @@ public class Contato {
         return "Contato{" +
                 "nome='" + nome + '\'' +
                 ", numeroTelefone=" + numeroTelefone +
-                '}';
+                '}' + '\'' ;
     }
 }
