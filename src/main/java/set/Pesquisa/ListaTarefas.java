@@ -65,10 +65,20 @@ public class ListaTarefas {
     public boolean marcarTarefaConcluida(String descricao){
         for (Tarefa t: tarefas){
             if(t.getDescricao().equals(descricao)){
-                return = rue;
-            }
-        } return false;
+                return true;
+        }
     }
-    marcarTarefaPendente(String descricao):
-    limparListaTarefas():
+
+    public boolean marcarTarefaPendente(String descricao){
+        for (Tarefa t: tarefas){
+            if(t.getDescricao().equals(descricao)){
+                return false;
+            }
+        }
+    }
+
+    public ListaTarefas limparListaTarefas(){
+            tarefas.clear();
+        }
+    }
 }
