@@ -24,7 +24,7 @@ public class ConjuntoConvidados {
                 }
             }
         }
-        convidadoSet.remove(convidadosRemovidos);
+        convidadoSet.remove("Temos " + convidadosRemovidos + " convidados");
     }
 
     public void contarConvidados(){
@@ -32,12 +32,21 @@ public class ConjuntoConvidados {
     }
 
     public static void main(String[] args) {
+//      Instanciando um novo Conjunto de Convidados
         ConjuntoConvidados convidadoUm = new ConjuntoConvidados();
+
+        //      Adicionando Convidados usando nome e codigoConvite
         convidadoUm.adicionarConvidado("Filipe", 832004);
         convidadoUm.adicionarConvidado("Filipe", 732005);
         convidadoUm.adicionarConvidado("Samara", 21102005);
 
+//      Contando candidatos
         convidadoUm.contarConvidados();
 
+//      Removendo candidatos
+        convidadoUm.removerConvidadoPorCodigoConvite(732005);
+
+//      Exibindo todos os candidatos
+        convidadoUm.exibirconvidad
     }
 }
