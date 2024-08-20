@@ -63,20 +63,22 @@ public class ListaTarefas {
         } return tarefasPendentes;
     }
 
-    public boolean marcarTarefaConcluida(String descricao){
-        for (Tarefa t: tarefas){
-            if(!t.getDescricao().equals(descricao)){
-                System.out.println("Sem correspondencia encontrada");
-        } else return true;
-    }
-
-    public boolean marcarTarefaPendente(String descricao){
-        String descricaoTemporaria = descricao;
+    public void marcarTarefaConcluida(String descricao){
         for (Tarefa t: tarefas){
             if(t.getDescricao().equals(descricao)){
-                return false;
-            }
+               t.setStatusConclusao(true);
+        } else {
+            System.out.println("Sem correspondencia encontrada");
         }
+    }
+
+    public void marcarTarefaPendente(String descricao){
+        for (Tarefa t: tarefas){
+            if(t.getDescricao().equals(descricao)){
+                t.setStatusConclusao(false);
+            } else {
+                System.out.println("Sem correspondencia encontrada");
+            }
     }
 
     public void limparListaTarefas(){
