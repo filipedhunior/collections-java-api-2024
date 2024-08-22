@@ -43,4 +43,14 @@ public class GerenciadorAlunos {
         System.out.println("EXIBINDO ALUNOS");
         alunos.forEach(System.out::println);
     }
+
+    public static void main(String[] args) {
+        GerenciadorAlunos gerenciador = new GerenciadorAlunos();
+        gerenciador.exibirAlunos();
+
+        gerenciador.adicionarAluno("Filipe" ,00L, 7.0);
+        gerenciador.adicionarAluno("Junior" ,010L, 9.0);
+        gerenciador.adicionarAluno("Junior" ,05L, 6.5);
+        gerenciador.adicionarAluno("Junior" ,05L, 6.5);
+    }
 }
