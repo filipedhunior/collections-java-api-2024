@@ -51,9 +51,14 @@ public class GerenciadorAlunos {
         gerenciador.adicionarAluno("Filipe" ,00L, 7.0);
         gerenciador.adicionarAluno("Junior" ,010L, 9.0);
         gerenciador.adicionarAluno("Leandra" ,05L, 6.5);
-        gerenciador.adicionarAluno("Beatriz" ,05L, 6.5);
+        gerenciador.adicionarAluno("Beatriz" ,05L, 6.4);
 
-//      gerenciador.exibirAlunos();
-        System.out.println(gerenciador.exibirAlunosPorNome());
+        gerenciador.exibirAlunos();
+
+//        gerenciador.removerAluno(00L);
+//        gerenciador.exibirAlunos();
+
+//        System.out.println(gerenciador.exibirAlunosPorNome());
+//        System.out.println(gerenciador.exibirAlunosPorNota());
     }
 }
