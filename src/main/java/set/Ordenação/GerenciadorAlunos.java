@@ -41,7 +41,7 @@ public class GerenciadorAlunos {
     }
     public void exibirAlunos(){
         System.out.println("EXIBINDO ALUNOS");
-        alunos.forEach(System.out::println);
+        System.out.println(alunos);
     }
 
     public static void main(String[] args) {
