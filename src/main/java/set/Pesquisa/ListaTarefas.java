@@ -36,53 +36,55 @@ public class ListaTarefas {
     }
     public void contarTarefas(){
         System.out.println("O numero total de tarefas é : " + tarefas.size());;
-    }
-    public ListaTarefas obterTarefasConcluidas() {
-        ListaTarefas tarefasConcluidas = new ListaTarefas();
-        for (Tarefa t: tarefas){
-            if(t.getDescricao().isEmpty()){
-                System.out.println("SEM TAREFAS CONCLUIDAS");
-            } else {
-                if (t.isStatusConclusao()){
-                    tarefasConcluidas.adicionarTarefa(t.getDescricao());
-                }
-            }
-        } return tarefasConcluidas;
-    }
+    }}
+//    public ListaTarefas obterTarefasConcluidas() {
+//        ListaTarefas tarefasConcluidas = new ListaTarefas();
+//        for (Tarefa t: tarefas){
+//            if(t.getDescricao().isEmpty()){
+//                System.out.println("SEM TAREFAS CONCLUIDAS");
+//            } else {
+//                if (t.isStatusConclusao()){
+//                    tarefasConcluidas.adicionarTarefa(t.getDescricao());
+//                }
+//            }
+//        } return tarefasConcluidas;
+//    }
 
-    public ListaTarefas obterTarefasPendentes(){
-        ListaTarefas tarefasPendentes = new ListaTarefas();
-        for (Tarefa t: tarefas){
-            if(t.getDescricao().isEmpty()){
-                System.out.println("SEM TAREFAS PENDENTES");
-            } else {
-                if (!t.isStatusConclusao()){
-                    tarefasPendentes.adicionarTarefa(t.getDescricao());
-                }
-            }
-        } return tarefasPendentes;
-    }
+//    public ListaTarefas obterTarefasPendentes(){
+//        ListaTarefas tarefasPendentes = new ListaTarefas();
+//        for (Tarefa t: tarefas){
+//            if(t.getDescricao().isEmpty()){
+//                System.out.println("SEM TAREFAS PENDENTES");
+//            } else {
+//                if (!t.isStatusConclusao()){
+//                    tarefasPendentes.adicionarTarefa(t.getDescricao());
+//                }
+//            }
+//        } return tarefasPendentes;
+//    }
 
-    public void marcarTarefaConcluida(String descricao){
-        for (Tarefa t: tarefas){
-            if(t.getDescricao().equals(descricao)){
-               t.setStatusConclusao(true);
-        } else {
-            System.out.println("Sem correspondencia encontrada");
-        }
-    }
-
-        public void marcarTarefaPendente(String descricao){
-        for (Tarefa t: tarefas){
-            if(t.getDescricao().equals(descricao)){
-                t.setStatusConclusao(false);
-            } else {
-                System.out.println("Sem correspondencia encontrada");
-            }
-    }
-
-    public void limparListaTarefas(){
-            tarefas.clear();
-        }
-    }
-}
+//    public void marcarTarefaConcluida(String descricao){
+//        for (Tarefa t: tarefas){
+//            if(t.getDescricao().equals(descricao)){
+//               t.setStatusConclusao(true);
+//        } else {
+//            System.out.println("Sem correspondencia encontrada");
+//        }
+//    }
+//
+//        /*
+//        public void marcarTarefaPendente(String descricao){
+//
+//        for (Tarefa t: tarefas){
+//            if(t.getDescricao().equals(descricao)){
+//                t.setStatusConclusao(false);
+//            } else {
+//                System.out.println("Sem correspondencia encontrada");
+//            }
+//    } */
+//
+////    public void limparListaTarefas(){
+////            tarefas.clear();
+////        }
+////    }
+////}
