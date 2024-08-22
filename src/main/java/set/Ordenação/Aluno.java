@@ -1,5 +1,7 @@
 package main.java.set.Ordenação;
 
+import java.util.Comparator;
+
 public class Aluno implements Comparable<Aluno>{
     @Override
     public int compareTo(Aluno aluno) {
@@ -47,5 +49,11 @@ public class Aluno implements Comparable<Aluno>{
                 ", matricula=" + matricula +
                 ", nota=" + nota +
                 '}';
+    }
+}
+class ComparatorPorNota implements Comparator<Aluno>{
+    @Override
+    public int compare(Aluno a1, Aluno a2) {
+        return Double.compare(a1.getNota(), a2.getNota());
     }
 }

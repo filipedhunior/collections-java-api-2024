@@ -28,6 +28,19 @@ public class GerenciadorAlunos {
 
     public Set<Aluno> exibirAlunosPorNome (){
         Set<Aluno> alunosPorNome = new TreeSet<>(alunos);
+
+        System.out.println("EXIBINDO ALUNOS [COM BASE NO NOME]");
         return alunosPorNome;
+    }
+    public Set<Aluno> exibirAlunosPorNota (){
+        Set<Aluno> alunosPorNota = new TreeSet<>(new ComparatorPorNota());
+        alunosPorNota.addAll(alunos);
+
+        System.out.println("EXIBINDO ALUNOS [COM BASE NA NOTA]");
+        return alunosPorNota;
+    }
+    public void exibirAlunos(){
+        System.out.println("EXIBINDO ALUNOS");
+        alunos.forEach(System.out::println);
     }
 }
