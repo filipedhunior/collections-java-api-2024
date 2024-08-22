@@ -52,5 +52,8 @@ public class GerenciadorAlunos {
         gerenciador.adicionarAluno("Junior" ,010L, 9.0);
         gerenciador.adicionarAluno("Junior" ,05L, 6.5);
         gerenciador.adicionarAluno("Junior" ,05L, 6.5);
+
+//      gerenciador.exibirAlunos();
+        System.out.println(gerenciador.exibirAlunosPorNome());
     }
 }
