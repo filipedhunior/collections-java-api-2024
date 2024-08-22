@@ -26,7 +26,7 @@ public class GerenciadorAlunos {
         System.out.println("Aluno removido com sucesso!");
     }
 
-    public Set<Aluno> exibirAlunosPorNome{
+    public Set<Aluno> exibirAlunosPorNome (){
         Set<Aluno> alunosPorNome = new TreeSet<>(alunos);
         return alunosPorNome;
     }
