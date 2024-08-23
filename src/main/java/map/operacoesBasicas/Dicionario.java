@@ -15,7 +15,7 @@ public class Dicionario {
             System.out.println("A palavra ultlizada ja existe no sistema!");
         }
         else {dicionario.put(palavra, definição);}
-        System.out.println("Palavra " + palavra + " adicionada com sucesso!");
+//        System.out.println("Palavra " + palavra + " adicionada com sucesso!");
     }
 
     public void removerPalavra(String palavra) {
@@ -30,12 +30,11 @@ public class Dicionario {
         Map<String, String> dicionarioPorPalavra = new HashMap<>();
 
         if (!dicionario.isEmpty()) {
-            for (String palavra : dicionario.keySet()) {
-                if (dicionario.containsKey(palavra)) {
-                    dicionarioPorPalavra.put(palavra, dicionario.get(palavra));
+                if (dicionario.containsKey(Palavra)) {
+                    dicionarioPorPalavra.put(Palavra, dicionario.get(Palavra));
                 }
-            }
-        } return dicionarioPorPalavra;
+            } return dicionarioPorPalavra;
+        }
     }
 
     public static void main(String[] args) {
@@ -54,9 +53,13 @@ public class Dicionario {
 
 //        novoDicionario.exbirPalavrras();
 //
-//        novoDicionario.removerPalavra("Correr");
+        novoDicionario.removerPalavra("Navegar");
 //
 //        novoDicionario.exbirPalavrras();
 
+        System.out.println(novoDicionario.pesquisarPorPalavra("Computador"));
+        System.out.println(novoDicionario.pesquisarPorPalavra("Navegar"));
+
+//        novoDicionario.exbirPalavrras();
     }
 }
