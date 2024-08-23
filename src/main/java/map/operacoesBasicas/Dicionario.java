@@ -15,7 +15,7 @@ public class Dicionario {
             System.out.println("A palavra ultlizada ja existe no sistema!");
         }
         else {dicionario.put(palavra, definição);}
-        System.out.println("Palavra" + palavra + " adicionada com sucesso!");
+        System.out.println("Palavra " + palavra + " adicionada com sucesso!");
     }
 
     public void removerPalavra(String palavra) {
