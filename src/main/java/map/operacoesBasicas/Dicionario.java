@@ -31,7 +31,7 @@ public class Dicionario {
 //        novoDicionario.exbirPalavrras();
 
         System.out.println(novoDicionario.pesquisarPorPalavra("Computador"));
-        System.out.println(novoDicionario.pesquisarPorPalavra("Navegar"));
+        System.out.println(novoDicionario.pesquisarPorPalavra("Cidade"));
 
 //        novoDicionario.exbirPalavrras();
     }
