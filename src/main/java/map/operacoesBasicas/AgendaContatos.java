@@ -41,7 +41,7 @@ public class AgendaContatos {
         if (!contatos.isEmpty()){
             for(Map.Entry<String, Integer> contato : this.contatos.entrySet()) {
                 if (contato.getKey().equals(nome)) {
-                    System.out.println("O contato é :" + contato.getKey());
+                    System.out.println("O contato é: " + contato.getKey());
                     System.out.println(contato.getValue());
                 }
             }
@@ -52,7 +52,16 @@ public class AgendaContatos {
         AgendaContatos listaContatos = new AgendaContatos();
         listaContatos.exibirContatos();
 
-        listaContatos.adicionarContato("Filipe", 9 9999 9999);
-        listaContatos.pesquisarPorNome("Pesquisa");
+        listaContatos.adicionarContato("Filipe", 999999999);
+        listaContatos.adicionarContato("Filipe Dhunior", 999999999);
+        listaContatos.adicionarContato("Felipe Dhunior", 999999999);
+//        INTEGER calcula expressões se houver algum sinal aritmetico
+
+//        listaContatos.pesquisarPorNome("Filipe");
+
+        listaContatos.exibirContatos();
+
+        listaContatos.removerContato("Filipe");
+        listaContatos.exibirContatos();
     }
 }
