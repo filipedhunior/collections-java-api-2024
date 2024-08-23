@@ -24,16 +24,16 @@ public class Dicionario {
         novoDicionario.adicionarPalavra("Estrutura", "Dispositivo eletrônico para processamento de dados.");
 
 
-//        novoDicionario.exbirPalavrras();
-//
+        novoDicionario.exbirPalavrras();
+
         novoDicionario.removerPalavra("Navegar");
-//
-//        novoDicionario.exbirPalavrras();
+
+        novoDicionario.exbirPalavrras();
 
         System.out.println(novoDicionario.pesquisarPorPalavra("Computador"));
         System.out.println(novoDicionario.pesquisarPorPalavra("Cidade"));
 
-//        novoDicionario.exbirPalavrras();
+        novoDicionario.exbirPalavrras();
     }
 
     public void adicionarPalavra(String palavra, String definição){
