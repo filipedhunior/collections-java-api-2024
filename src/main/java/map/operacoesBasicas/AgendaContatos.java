@@ -16,26 +16,43 @@ public class AgendaContatos {
     }
 
     public void adicionarContato(String nome, Integer telefone){
-        this.contatos.put(nome, telefone);
+        contatos.put(nome, telefone);
     }
 
     public void removerContato(String nome){
-        // TODO: removendo contato usando somente sua chave
-        this.contatos.remove(nome);
-        System.out.println("Contato removido com sucesso!");
-    }
+        if (!contatos.isEmpty()){
+            // TODO: removendo contato usando somente sua chave
+            contatos.remove(nome);
+            System.out.println("Contato removido com sucesso!");
+        }
+   }
 
     public void exibirContatos(){
-        System.out.println(contatos.toString());
-        // toString vai fazer o mesmo processo de sobrescrita?
+        if (contatos.isEmpty()){
+            System.out.println("A lista esta vazia!");
+            System.out.println(contatos);
+        } else {
+            System.out.println(contatos.toString());
+            // toString vai fazer o mesmo processo de sobrescrita?
+        }
     }
 
     public void pesquisarPorNome(String nome){
-        for(Map.Entry<String, Integer> contato : this.contatos.entrySet()){
-            if(contato.getKey().equals(nome)){
-                System.out.println("O contato é :" + contato.getKey());
-                System.out.println(contato.getValue());;
+        if (!contatos.isEmpty()){
+            for(Map.Entry<String, Integer> contato : this.contatos.entrySet()) {
+                if (contato.getKey().equals(nome)) {
+                    System.out.println("O contato é :" + contato.getKey());
+                    System.out.println(contato.getValue());
+                }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        AgendaContatos listaContatos = new AgendaContatos();
+        listaContatos.exibirContatos();
+
+        listaContatos.adicionarContato("Filipe", 9 9999 9999);
+        listaContatos.pesquisarPorNome("Pesquisa");
     }
 }
