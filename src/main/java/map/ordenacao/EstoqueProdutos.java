@@ -13,22 +13,34 @@ public class EstoqueProdutos {
     }
 
     public void adicionarProduto(Long cod, String nome, int quant, Double preco){
-        Produto produto = new Produto(cod, nome, quant, preco);
-        produtosEstoque.put(cod, produto);
+        produtosEstoque.put(cod, new Produto(cod, nome, quant, preco));
     }
 
     public void exibirProdutos(){
         System.out.println(produtosEstoque.toString());
     }
 
-    public int calcularValorTotalEstoque(){
+    public double calcularValorTotalEstoque(){
         // Receber a lista produtosEstoque
         // Calcular seus valores individuais por suas quantidades
         // Calcular esse resultado final
-        return 0;
+        double valorTotalEstoque;
+        if (!produtosEstoque.isEmpty()){
+            for (Produto produto : produtosEstoque.values()){
+                valorTotalEstoque += produto.getPreco() * produto.getQuant();
+            }
+        return valorTotalEstoque;
     }
 
-    public void obterProdutoMaisCaro(){
+    public Produto obterProdutoMaisCaro (){
+            Produto produtoMaisCaro = null;
+            double maiorPreço = Double.MIN_VALUE;
+            for (Produto p : produtosEstoque.values()){
+                if (p.getPreco() > maiorPreço){
+                    produtoMaisCaro = p;
+                }
+            }
+        }
         // Altere a saida da classe para Map
         // Use comparator ou comparable
     }
