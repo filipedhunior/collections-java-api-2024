@@ -44,9 +44,15 @@ public class EstoqueProdutos {
         // Altere a saida da classe para Map
         // Use comparator ou comparable
     }
-    public void obterProdutoMaisBarato(){
-        // Altere a saida da classe para Map
-        // Use comparator ou comparable
+    public Produto obterProdutoMaisBarato(){
+        Produto produtoMaisBarato = null; // produto que vai ser mostrado na saida
+        double menorPreço = Double.MAX_VALUE;
+        for (Produto produto : produtosEstoque.values()){
+            if (produto.getPreco() < menorPreço){
+                produtoMaisBarato = produto;
+            }
+        }
+        return produtoMaisBarato;
     }
 
     public void obterProdutoMaiorQuantValorEstoque(){
