@@ -32,7 +32,7 @@ public class EstoqueProdutos {
         return valorTotalEstoque;
     }
 
-    public Produto obterProdutoMaisCaro (){
+    public Produto obterProdutoMaisCaro() {
             Produto produtoMaisCaro = null;
             double maiorPreço = Double.MIN_VALUE;
             for (Produto p : produtosEstoque.values()){
