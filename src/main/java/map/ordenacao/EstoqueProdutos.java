@@ -44,6 +44,7 @@ public class EstoqueProdutos {
         // Altere a saida da classe para Map
         // Use comparator ou comparable
     }
+
     public Produto obterProdutoMaisBarato(){
         Produto produtoMaisBarato = null; // produto que vai ser mostrado na saida
         double menorPreço = Double.MAX_VALUE;
@@ -55,22 +56,20 @@ public class EstoqueProdutos {
         return produtoMaisBarato;
     }
 
-    public Produto obterProdutoMaiorQuantValorEstoque(){
+    public Produto obterProdutoMaiorQuantValorEstoque() {
         // Retorna o produto que está em maior quantidade no estoque, considerando o valor total de cada produto (quantidade * preço).
         //TODO: comparador de valores (preço * quant) em relação ao ultimo
         Produto produtoMaiorQuantValorEstoque = null;
         double maiorValorEstoque = 0;
-        if (!produtosEstoque.isEmpty()){
-            for (Produto produto: produtosEstoque.values()){
+        if (!produtosEstoque.isEmpty()) {
+            for (Produto produto : produtosEstoque.values()) {
                 double somaQuantValor = produto.getPreco() * produto.getQuant();
-                if (somaQuantValor > maiorValorEstoque){
+                if (somaQuantValor > maiorValorEstoque) {
                     maiorValorEstoque += somaQuantValor;
                     produtoMaiorQuantValorEstoque = produto;
                 }
+            }
+
         } return produtoMaiorQuantValorEstoque;
-    }
-
-    public static void main(String[] args) {
-
     }
 }
