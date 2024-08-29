@@ -1,6 +1,6 @@
-package main.java.map.ordenacao;
+package main.java.map.pesquisa;
 
-import main.java.map.pesquisa.Produto;
+import main.java.map.ordenacao.Produto;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package main.java.map.pesquisa;
+package main.java.map.ordenacao;
 
 public class LivrariaOnline {
 }
