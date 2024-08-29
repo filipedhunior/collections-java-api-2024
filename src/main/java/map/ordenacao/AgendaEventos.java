@@ -45,6 +45,7 @@ public class AgendaEventos {
         agendaEventos.exibirAgenda();
 
         agendaEventos.adicionarEvento(LocalDate.of(1822,9,07), "Independencia do Brasil", "Pedro Alvares Cabral");
+        agendaEventos.adicionarEvento(LocalDate.of(1822,9,07), "Independencia do Brasil", "Pedro Alvares Cabral");
         agendaEventos.exibirAgenda();
     }
 }
